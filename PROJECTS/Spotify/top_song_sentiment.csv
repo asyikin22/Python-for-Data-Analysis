@@ -1,0 +1,166 @@
+year,artist,song,sentiment,sentiment_label
+2014,Ed Sheeran,Thinking out Loud,0.9967,positive
+2014,Norah Jones,Come Away With Me,0.1635,positive
+2014,Troye Sivan,Happy Little Pill,0.4848,positive
+2014,The Script,Superheroes,-0.9961,negative
+2014,Ellie Goulding,How Long Will I Love You,0.9447,positive
+2014,Colbie Caillat,Try,0.9823,positive
+2014,Sia,Chandelier,0.9395,positive
+2014,Justin Timberlake,Not a Bad Thing,0.9936,positive
+2014,Guba,You're So Fine,0.9329,positive
+2014,Echosmith,Cool Kids,0.9996,positive
+2014,MAGIC!,Rude,-0.996,negative
+2014,Passenger,Life's For The Living,0.8812,positive
+2014,Lana Del Rey,Young And Beautiful,0.9992,positive
+2014,Yuna,Musician,0.7571,positive
+2014,Tom Odell,Another Love - Zwette Edit,0.9959,positive
+2015,Bee Gees,How Deep Is Your Love,0.9929,positive
+2015,Dido,Thank You - (Acoustic) [Live],0.9936,positive
+2015,Adam Levine,Lost Stars,-0.9628,negative
+2015,Meghan Trainor,Like I'm Gonna Lose You,0.9963,positive
+2015,Hozier,Take Me to Church,-0.7134,negative
+2015,Yuna,Backpacking Around Europe,0.9932,positive
+2015,Eminem,Cleanin' Out My Closet,-0.9992,negative
+2015,Gary Jules,Mad World,-0.9382,negative
+2015,Gotye,Somebody That I Used To Know,0.9891,positive
+2015,John Lennon,Imagine,0.6775,positive
+2015,Tove Lo,Habits (Stay High),-0.804,negative
+2015,Sixpence None The Richer,Kiss Me,0.9907,positive
+2015,Yuna,Lights And Camera,0.9957,positive
+2015,Yuna,After Midnight,0.9898,positive
+2015,Yuna,I Wanna Go,0.8853,positive
+2016,Selena Gomez,Same Old Love,0.9913,positive
+2016,Madonna,Unapologetic Bitch,0.9752,positive
+2016,Coldplay,Hymn for the Weekend,-0.994,negative
+2016,Bee Gees,How Deep Is Your Love,0.9929,positive
+2016,Meghan Trainor,NO,-0.9995,negative
+2016,Beyoncé,***Flawless (feat. Chimamanda Ngozi Adichie),0.9982,positive
+2016,Adam Levine,Lost Stars,-0.9628,negative
+2016,Yuna,Crush,0.962,positive
+2016,Adele,Send My Love (To Your New Lover),0.9994,positive
+2016,gnash,"i hate u, i love u (feat. olivia o'brien)",-0.8703,negative
+2016,Ruth B.,Lost Boy,0.9892,positive
+2016,Destiny's Child,Cater 2 U,0.9987,positive
+2016,Yuna,Too Close,0.9657,positive
+2016,Lily Allen,Fuck You,-0.9992,negative
+2016,Beyoncé,7/11,0.9386,positive
+2017,Julia Michaels,Issues,-0.0129,neutral
+2017,ZAYN,I Don't Wanna Live Forever,-0.9809,negative
+2017,mgk,Bad Things - With Camila Cabello,-0.7756,negative
+2017,Jon Bellion,All Time Low,-0.9999,negative
+2017,Yuna,Pulang,0.9906,positive
+2017,Norah Jones,Come Away With Me,0.1635,positive
+2017,Ed Sheeran,Shape of You,0.9995,positive
+2017,Lukas Graham,You're Not There,-0.8922,negative
+2017,James Arthur,Say You Won't Let Go,0.9946,positive
+2017,Alessia Cara,Scars To Your Beautiful,0.9986,positive
+2017,AJR,Weak,-0.9879,negative
+2017,Lady Gaga,Million Reasons,0.9926,positive
+2017,Colbie Caillat,Try,0.9823,positive
+2017,Ariana Grande,Everyday,-0.5168,negative
+2017,Olivia O'Brien,Empty,-0.9985,negative
+2018,NF,Let You Down,0.9975,positive
+2018,Demi Lovato,Sorry Not Sorry,-0.9828,negative
+2018,Bebe Rexha,Meant to Be,0.4328,positive
+2018,Queen,Somebody To Love - Remastered 2011,0.9989,positive
+2018,Queen,Another One Bites The Dust - Remastered 2011,0.9838,positive
+2018,Twenty One Pilots,Stressed Out,0.998,positive
+2018,Queen,Under Pressure,0.999,positive
+2018,Queen,Don't Stop Me Now,0.9981,positive
+2018,Queen,Bohemian Rhapsody - Remastered 2011,-0.9806,negative
+2018,Hailee Steinfeld,Most Girls,0.9996,positive
+2018,Kesha,Praying,0.9965,positive
+2018,Queen,I Want To Break Free - Single Remix,0.9972,positive
+2018,Queen,Killer Queen - Remastered 2011,-0.8825,negative
+2018,Queen,Crazy Little Thing Called Love - Remastered 2011,0.9982,positive
+2018,Beyoncé,Run the World (Girls),0.9974,positive
+2019,Julia Michaels,Anxiety,0.9989,positive
+2019,Ariana Grande,7 rings,0.997,positive
+2019,Drax Project,Woke Up Late,0.996,positive
+2019,Yuna,Lelaki,0.9812,positive
+2019,Tones And I,Never Seen the Rain,-0.9582,negative
+2019,Queen,Somebody To Love - Remastered 2011,0.9989,positive
+2019,Fifth Harmony,Work from Home,0.9844,positive
+2019,Normani,Motivation,0.9911,positive
+2019,Miley Cyrus,Mother's Daughter,0.9956,positive
+2019,Ella,Layar Impian,0.9863,positive
+2019,JP Saxe,If the World Was Ending,0.8487,positive
+2019,Hozier,Take Me to Church,-0.7134,negative
+2019,Destiny's Child,Cater 2 U,0.9987,positive
+2019,Eminem,Cleanin' Out My Closet,-0.9992,negative
+2019,Shila Amzah,Patah Seribu,0.7615,positive
+2020,Jessica Mauboy,Little Things,-0.9977,negative
+2020,Outkast,Hey Ya!,0.9481,positive
+2020,JP Saxe,If the World Was Ending,0.8487,positive
+2020,Blue Ivy,BROWN SKIN GIRL,0.9995,positive
+2020,Rihanna,Higher,0.7279,positive
+2020,Andmesh,Cinta Luar Biasa,0.9985,positive
+2020,Natalie Taylor,Surrender,0.9956,positive
+2020,Eminem,Cleanin' Out My Closet,-0.9992,negative
+2020,Selena Gomez,Rare,0.9423,positive
+2020,Rihanna,Love On The Brain,0.999,positive
+2020,Beyoncé,Halo,0.9876,positive
+2020,Rihanna,Kiss It Better,0.9961,positive
+2020,Rihanna,Same Ol Mistakes,0.9775,positive
+2020,Rihanna,Needed Me,-0.997,negative
+2020,Rihanna,Close To You,0.9869,positive
+2021,Lady Gaga,Rain On Me,0.9923,positive
+2021,Demi Lovato,Sorry Not Sorry,-0.9828,negative
+2021,Zedd,The Middle,-0.9767,negative
+2021,Beyoncé,Love On Top,0.9997,positive
+2021,Beyoncé,Irreplaceable,0.8849,positive
+2021,Ariana Grande,no tears left to cry,0.9882,positive
+2021,Katy Perry,Never Really Over,-0.5032,negative
+2021,Anne-Marie,2002,0.9989,positive
+2021,Dua Lipa,Don't Start Now,-0.9873,negative
+2021,Ariana Grande,"thank u, next",0.9996,positive
+2021,G Sette,Black Tattoo - Lonely,0.9296,positive
+2021,Devis,Chi se ne frega,0.3766,positive
+2021,Ed Sheeran,I Don't Care,0.9923,positive
+2021,Beyoncé,Dance for You,0.9948,positive
+2021,Sam Smith,Dancing With A Stranger,0.9046,positive
+2022,Sam Smith,Unholy,0.9936,positive
+2022,W.A.R.I.S,Rembau Most Wanted,0.9276,positive
+2022,Cardi B,Bodak Yellow,-0.4373,negative
+2022,Rema,Calm Down,0.9785,positive
+2022,Stephen Sanchez,Until I Found You,-0.9743,negative
+2022,ALYPH,SWIPE,0.9905,positive
+2022,Luqman Podolski,Ring Ring,-0.9906,negative
+2022,Beyoncé,CUFF IT,-0.9938,negative
+2022,Luqman Podolski,Sorang,0.9886,positive
+2022,OneRepublic,I Ain't Worried,0.9876,positive
+2022,Dewa 19,Sedang Ingin Bercinta,0.9856,positive
+2022,Lily Allen,Fuck You,-0.9992,negative
+2022,Lil Nas X,INDUSTRY BABY,0.9969,positive
+2022,Nicki Minaj,Super Freaky Girl,-0.9974,negative
+2022,Taylor Swift,Anti-Hero,-0.9948,negative
+2023,Mahalini,Sial,-0.9902,negative
+2023,Daniela Andrade,La Vie En Rose,0.9382,positive
+2023,The Righteous Brothers,Unchained Melody,0.9898,positive
+2023,Stephen Sanchez,Until I Found You,-0.9743,negative
+2023,Sarah,Ke Hujung Dunia,0.9918,positive
+2023,Aina Abdul,Blue,0.9847,positive
+2023,Giveon,Heartbreak Anniversary,0.8959,positive
+2023,Saixse,Malampagi,-0.9424,negative
+2023,Joe Flizzow,Satu Malam Di Temasek,-0.9644,negative
+2023,Mariah Carey,Touch My Body,0.9988,positive
+2023,Zynakal,Sakit,-0.9962,negative
+2023,Amir Jahari,Hasrat,0.9775,positive
+2023,Tom Odell,Another Love,0.9986,positive
+2023,Drake,Rich Flex,-0.9991,negative
+2023,George Ezra,Budapest,0.9844,positive
+2024,Aina Abdul,Cinta Tak Pernah Tepat Waktu,-0.9791,negative
+2024,SZA,Nobody Gets Me,0.8752,positive
+2024,21 Savage,redrum,-0.9807,negative
+2024,GloRilla,TGIF,-0.9971,negative
+2024,Kanye West,Homecoming,0.9879,positive
+2024,DOLLA,best side,0.9992,positive
+2024,Mariah Carey,Touch My Body,0.9988,positive
+2024,Ghea Indrawari,Jiwa Yang Bersedih,0.8938,positive
+2024,Macklemore,HIND'S HALL,0.9371,positive
+2024,Megan Thee Stallion,Mamushi,0.988,positive
+2024,Rossa,Takkan Berpaling DariMu,0.9897,positive
+2024,Hozier,Too Sweet,0.9985,positive
+2024,Hozier,Work Song,-0.7612,negative
+2024,Coi Leray,Players,0.9837,positive
+2024,Ariana Grande,R.E.M,0.9956,positive
