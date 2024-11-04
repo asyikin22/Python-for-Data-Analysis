@@ -6,14 +6,45 @@
     <title>My Books</title>
     <style>
         body {
-            background-image: url(./charts/background2.jpeg);
+            background-color: darkblue;
+            margin: 0;
+            padding: 100px 50px 0;
         }
         header {
             background-color: mediumturquoise;
-            height: 50px;
+            height: 120px;
+            display: flex;
+            gap: 50px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        ul {
+            list-style-type: none;
+            display: flex;
+        }
+        li {
+            margin-right:  20px;
         }
         h1 {
             text-align: center;
+            font-size: 40px;
+        }
+        a {
+            text-decoration: none;
+            color: brown;
+            font-size: 20px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h3 {
+            font-size: 35px;
         }
         .container {
             display: flex;
@@ -24,53 +55,109 @@
         .item {
             background-color: rgba(211, 211, 211, 0.4);
             border: 1px solid #ddd;
-            margin: 10px;
+            margin: 5px;
+            scroll-margin-top: 130px;
+        }
+        iframe{
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        #chart_search {
+            display: flex;
+            flex-direction: row;
+            gap:20px;
+        }
+        .search_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto 0;
+        }
+        .search_container input[type="text"] {
+            width: 400px;
+            padding: 8px;
+            margin-right: 8px;
+        }
+        .search_container button {
+            padding: 8px 12px;
+            margin-top: 10px;
+            border-radius: 15px;
+        }
+        #results {
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 10px;
+            margin-top: 10px;
+            width: 450px;
+        }
+        button:active{
+            background-color: #a7abad;
+            transform: translateY(2px);
         }
         #double_charts {
             display: flex;
-            flex-direction: row;
+            justify-content: center;
+            align-items: center;
             gap: 5px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>100 Books I read from 2014 - 2024 </h1>
+        <h1> My Reading List:<br>100 books from 2014 to 2024</h1>
+        <nav>
+            <ul>
+                <li><a href="#chart_search">Power BI/Search</a></li>
+                <li><a href="#bubble_chart">Bubble Chart</a></li>
+                <li><a href="#popular_books">Popular Books</a></li>
+                <li><a href="#books_rating">Book Rating</a></li>
+                <li><a href="#word_cloud">Word Cloud</a></li>
+                <li><a href="#sentiment_score">Sentiment Score</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="container">
-        <div class="item">
-            <iframe title="My_Books" width="800" height="486" src="https://app.powerbi.com/view?r=eyJrIjoiMjllMzI1NmYtODNlYS00NTcyLTk2NmQtMDliM2M5ZWVlZjIxIiwidCI6IjBlNzA3YjczLTMzZjMtNDgyZi1iMmM5LWQxZDNiYTM0NGY1MyIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+        <div class="item" id="chart_search">
+            <div class="chart_container">
+                <iframe title="My_Books" width="800" height="486" src="https://app.powerbi.com/view?r=eyJrIjoiMjllMzI1NmYtODNlYS00NTcyLTk2NmQtMDliM2M5ZWVlZjIxIiwidCI6IjBlNzA3YjczLTMzZjMtNDgyZi1iMmM5LWQxZDNiYTM0NGY1MyIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+            <div class="search_container" id="search_books">
+                <h3>Search Books</h1>
+                <input type="text" id="search-input" placeholder="Enter Author or Book Title...">
+                <div search_clear_btn>
+                    <button id="search_btn" onclick="searchBooks()">Search</button>
+                    <button id="clear_btn" onclick="clearInput()">Clear</button>
+                </div>
+                <div id="results"></div>
+            </div>
         </div>
 
-        <div class="item">
-            <iframe src="./charts/bubble_chart.html" width="100%" height="720" frameborder="0"></iframe>
+        <div class="item" id="bubble_chart">
+            <iframe src="./charts/bubble_chart.html" width="100%" height="600" frameborder="0"></iframe>
         </div>
 
-        <div class="item">
+        <div class="item" id="popular_books">
             <iframe src="./charts/popular_books.html" width="100%", height="500", frameborder="0"></iframe>
         </div>
 
-        <div class="item">
+        <div class="item" id="books_rating">
             <iframe src="http://127.0.0.1:8050", width="100%", height="620"></iframe>
         </div>
 
         <div class="item" id="double_charts">
-            <div class="double_chart_container">
-                <iframe src="./charts/sentiment_count.html", width="410" height="550"></iframe>
+            <div class="double_chart_container" id="word_cloud">
+                <img src="wordcloud.png" width="450px" height="450px">
             </div>
-            <div class="double_chart_container">
-                <iframe src="./charts/sentiment_analysis.html", width="800", height="550"></iframe>
+            <div class="double_chart_container" id="sentiment_score">
+                <iframe src="./charts/sentiment_analysis.html", width="800", height="520"></iframe>
             </div>
         </div>
-    
-        <div class="item">
-            <img src="wordcloud.png" width="70%" style="display: block; margin: 0 auto;">
-        </div>
-<!-- 
-        <div class="item">7</div>
-        <div class="item">8</div> -->
     </div>
-    
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>  
+
 </body>
 </html>s
