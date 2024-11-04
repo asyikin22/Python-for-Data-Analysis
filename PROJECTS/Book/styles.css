@@ -1,0 +1,149 @@
+body {
+    background-color: darkblue;
+    margin: 0;
+    font-size: 16px;
+}
+header {
+    background-color: mediumturquoise;
+    height: 120px;
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+}
+li {
+    margin-right:  20px;
+}
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-left: 1rem;
+}
+a {
+    text-decoration: none;
+    color: brown;
+    font-size: 1.4rem;
+}
+a:hover {
+    text-decoration: underline;
+}
+h3 {
+    font-size: 2rem;
+    margin-top: 5px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 0;
+    gap: 5px;
+    max-width: 1200px;
+    width: 90%;
+}
+.item {
+    background-color: rgba(211, 211, 211, 0.4);
+    border: 1px solid #ddd;
+    margin: 5px;
+    scroll-margin-top: 130px;
+}
+iframe{
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 620px;
+}
+#chart_search {
+    display: flex;
+    gap:20px;
+    max-height: 500px;
+}
+.chart_container{
+    display: flex;
+    flex: 2;
+    height: 100%;
+}
+.chart_container iframe{
+    height: 500px;
+    width: 100%;
+}
+.search_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+}
+.search_container input[type="text"] {
+    width: 100%;
+    max-width: 350px;
+    padding: 8px;
+}
+.search_container button {
+    padding: 8px 12px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+#results {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    margin-top: 10px;
+    width: 90%;
+    max-width: 450px;
+    padding-bottom: 10px;
+}
+button:active{
+    background-color: #a7abad;
+    transform: translateY(2px);
+}
+#bubble_chart{
+    max-height: 600px;
+}
+#double_charts {
+    display: flex;
+    gap: 5px;
+    padding-left: 10px;
+}
+.double_chart_container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.double_chart_container img{
+    width: 100%;
+    height: 520px;
+    padding: 10px;
+}
+.double_chart_container iframe {
+    width: 100%;
+    height: 550px;
+}
+/*responsiveness*/
+@media(max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container{
+        margin: 20px auto;
+        padding: 10px;
+    }
+    #results {
+        max-width: 90%;
+    }
+}
+

@@ -32,10 +32,10 @@ function searchBooks() {
             //Add Goodreads and Google Books links
             const GoogleBooksURL = `https://www.google.com/search?q=${encodeURIComponent(book.Title + " " + book.Author)}`;
             bookDiv.innerHTML = `
-                <h4 style="text-align: center;">${book.Title} by ${book.Author}</h4>
+                <h2 style="text-align: center; color: yellowgreen;">${book.Title} by ${book.Author}</h4>
                 <div style="text-align: center;">
-                    <a href="${book.URL.trim()}" target="_blank" style="text-decoration: none; color: blue; transition: color 0.3s ease;">Goodreads Link</a><br>
-                    <a href="${GoogleBooksURL}" target="_blank" style="text-decoration: none; color: blue; transition: color 0.3s ease;">Google Search Link</a>
+                    <a href="${book.URL.trim()}" target="_blank" style="text-decoration: none; color: pink; transition: color 0.3s ease;">Goodreads Link</a><br>
+                    <a href="${GoogleBooksURL}" target="_blank" style="text-decoration: none; color: violet; transition: color 0.3s ease;">Google Search Link</a>
                 </div>
             `;
             resultsDiv.appendChild(bookDiv)
