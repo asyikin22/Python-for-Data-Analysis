@@ -74,6 +74,32 @@ function clearInput() {
     document.getElementById("search-input").value = "";
     
     displayGif();
-
-    
 }
+
+//functions to handle switching tabs/sections
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all the tab buttons and sections
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabSections = document.querySelectorAll('.tab-section');
+
+    function switchTab(event) {
+        // Remove the 'active' class from all buttons and sections
+        tabButtons.forEach(button => button.classList.remove('active'));
+        tabSections.forEach(section => section.classList.remove('active'));
+
+        // Add the 'active' class to the clicked tab button and corresponding section
+        const selectedSection = event.target.getAttribute('data-section');
+        document.getElementById(selectedSection).classList.add('active');
+        event.target.classList.add('active');
+    }
+
+    // Attach click event listeners to each tab button
+    tabButtons.forEach(button => {
+        button.addEventListener('click', switchTab);
+    });
+
+    // // Optionally, activate the first tab by default
+    // document.querySelector('.tab-button.active').classList.add('active');
+    // document.querySelector('.tab-section.active').classList.add('active');
+});
+
