@@ -12,11 +12,10 @@
         <h1>An Analytical Insight into My Library: <br>100 Books from 2014 - 2024</h1>
         <nav class="tabs">
             <button class="tab-button active" data-section="chart_search">Search</button>
-            <button class="tab-button" data-section="bubble_chart">Bubble Chart</button>
-            <button class="tab-button" data-section="popular_books">Popular Books</button>
-            <button class="tab-button" data-section="books_rating">Book Rating</button>
-            <button class="tab-button" data-section="word_cloud">Word Cloud</button>
-            <button class="tab-button" data-section="sentiment_score">Sentiment Score</button>
+            <button class="tab-button" data-section="bubble_chart">Overview</button>
+            <button class="tab-button" data-section="popular_books">Popularity</button>
+            <button class="tab-button" data-section="books_rating">Rating</button>
+            <button class="tab-button" data-section="sentiment_score">Sentiment</button>
         </nav>
     </header>
 
@@ -26,9 +25,9 @@
                 <iframe title="My_Books" src="https://app.powerbi.com/view?r=eyJrIjoiMjllMzI1NmYtODNlYS00NTcyLTk2NmQtMDliM2M5ZWVlZjIxIiwidCI6IjBlNzA3YjczLTMzZjMtNDgyZi1iMmM5LWQxZDNiYTM0NGY1MyIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
             </div>
             <div class="search_container" id="search_books">
-                <h3>Search Books</h1>
+                <h3>Search Books</h3>
                 <input type="text" id="search-input" placeholder="Enter Author or Book Title...">
-                <div search_clear_btn>
+                <div id="search_clear_btn">
                     <button id="search_btn" onclick="searchBooks()">Search</button>
                     <button id="clear_btn" onclick="clearInput()">Clear</button>
                 </div>
@@ -37,39 +36,38 @@
         </div>
 
         <div class="tab-section" id="bubble_chart">
-            <iframe src="./charts/bubble_chart.html" frameborder="0"></iframe>
+            <iframe src="./charts/bubble_chart.html"></iframe>
         </div>
 
         <div class="tab-section" id="popular_books">
-            <iframe src="./charts/popular_books.html" frameborder="0"></iframe>
+            <iframe src="./charts/popular_books.html"></iframe>
         </div>
 
         <div class="tab-section" id="books_rating">
             <iframe src="http://127.0.0.1:8050"></iframe>
         </div>
 
-        <div class="tab-section" id="word_cloud">
-            <img src="wordcloud.png">
-        </div>
     
         <div class="tab-section" id="sentiment_score">
-            <iframe src="./charts/sentiment_analysis.html" width="250" height="300"></iframe>
-            <div id="sentiment-analysis">
-                <h2>Sentiment Analysis: VADER (Valence Aware Dictionary and sEntiment Reasoner)</h2>
-                <p class="sentiment-description"><strong>Positive Score (More than 0)</strong></p>
-                <ul class="sentiment-list">
-                    <li>The summaries likely contain words or phrases conveying optimism, happiness, success, or other uplifting themes.</li>
-                    <li>These scores often suggest lighthearted or hopeful tones.</li>
-                </ul>
-    
-                <p class="sentiment-description"><strong>Negative Scores (Less than 0)</strong></p>
-                <ul class="sentiment-list">
-                    <li>Words and phrases in the summary likely express dissatisfaction, criticism, sadness, or frustration.</li>
-                    <li>It might describe unpleasant events, tragic themes, or a bleak tone.</li>
-                    <li>It may also indicate stories with intense emotional struggles or dark themes.</li>
-                </ul>
+            <div id="sentiment_container">
+                <div id="sentiment_analysis_chart">
+                    <iframe src="./charts/sentiment_analysis.html"></iframe>
+                </div>
+
+                <div id="sentiment-analysis">
+                    <p class="sentiment-description"><strong>Positive Score (More than 0)</strong></p>
+                    <ul class="sentiment-list">
+                        <li>The summaries likely contain words or phrases conveying optimism, happiness, success, or other uplifting themes.</li>
+                        <li>These scores often suggest lighthearted or hopeful tones.</li>
+                    </ul>
+        
+                    <p class="sentiment-description"><strong>Negative Scores (Less than 0)</strong></p>
+                    <ul class="sentiment-list">
+                        <li>Words and phrases in the summary likely express dissatisfaction, criticism, sadness, or frustration.</li>
+                        <li>It might describe unpleasant events, tragic themes, or a bleak tone.</li>
+                    </ul>
+                </div>
             </div>
-        </div>
         </div>
     </div>
 

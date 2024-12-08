@@ -19,13 +19,13 @@ function displayGif() {
 
     resultsDiv.innerHTML = `
         <div style="text-align: center; color: gray;">
-            <div style="text-align: center; color: gray; display: flex; justify-content: center; align-items: center; height: 23vh;">
+            <div style="text-align: center; color: gray; display: flex; justify-content: center; align-items: center; height: 24vh;">
                 <iframe src="https://giphy.com/embed/JIX9t2j0ZTN9S" 
                         style="max-width: 100%; max-height: 100%; border: none;" 
                         allowFullScreen>
                 </iframe>
             </div>
-            <p style="color: brown; font-size: 20px;">No results to display. Start your search!</p>
+            <p style="color: brown; font-size: 20px;">No results to display 😞 <br> Start your search!</p>
         </div>
     `;
 }
@@ -62,6 +62,7 @@ function searchBooks() {
         })
     }
 }
+
 //event listener for 'enter' key press
 document.getElementById("search-input").addEventListener("keypress", function(event) {
     if(event.key === "Enter") {
