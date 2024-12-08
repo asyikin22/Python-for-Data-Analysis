@@ -21,29 +21,49 @@
 
     <div class="container">
         <div class="tab-section active" id="chart_search">
-            <div class="chart_container">
-                <iframe title="My_Books" src="https://app.powerbi.com/view?r=eyJrIjoiMjllMzI1NmYtODNlYS00NTcyLTk2NmQtMDliM2M5ZWVlZjIxIiwidCI6IjBlNzA3YjczLTMzZjMtNDgyZi1iMmM5LWQxZDNiYTM0NGY1MyIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+            <div class="chart-description-container">
+                <p class="chart-description">This Power BI dashboard presents a detailed analysis of the collection, 
+                    including the distribution of genres and original languages, a map of authors' origin, gender breakdown, 
+                    the publication years of books, and a comparative analysis of fiction and non-fiction books by country of origin. 
+                    This section also allows you to search for books by title or author.</p>
             </div>
-            <div class="search_container" id="search_books">
-                <h3>Search Books</h3>
-                <input type="text" id="search-input" placeholder="Enter Author or Book Title...">
-                <div id="search_clear_btn">
-                    <button id="search_btn" onclick="searchBooks()">Search</button>
-                    <button id="clear_btn" onclick="clearInput()">Clear</button>
+
+            <div class="chart_search_layout">
+                <div class="chart_container">
+                    <iframe title="My_Books" src="https://app.powerbi.com/view?r=eyJrIjoiMjllMzI1NmYtODNlYS00NTcyLTk2NmQtMDliM2M5ZWVlZjIxIiwidCI6IjBlNzA3YjczLTMzZjMtNDgyZi1iMmM5LWQxZDNiYTM0NGY1MyIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
                 </div>
-                <div id="results"></div>
+
+                <div class="search_container" id="search_books">
+                    <h3>Search Books</h3>
+                    <input type="text" id="search-input" placeholder="Enter Author or Book Title...">
+                    <div id="search_clear_btn">
+                        <button id="search_btn" onclick="searchBooks()">Search</button>
+                        <button id="clear_btn" onclick="clearInput()">Clear</button>
+                    </div>
+                    <div id="results"></div>
+                </div>
             </div>
         </div>
 
         <div class="tab-section" id="bubble_chart">
+            <p>This bubble chart visualizes books by Year Published, Origin, Genre, and Pages. 
+                The x-axis represents the publication year, while the y-axis shows the book's origin. 
+                Each bubble's size reflects the number of pages, and the color represents the genre. 
+                Hovering over the bubbles reveals more details</p>
             <iframe src="./charts/bubble_chart.html"></iframe>
         </div>
 
         <div class="tab-section" id="popular_books">
+            <p>This bar chart displays the Top 15 most popular books from my collection based on ratings from Goodreads. 
+                The x-axis represents the number of ratings, and the y-axis lists the book titles.
+                The chart highlights the books with the highest engagement from readers.</p>
             <iframe src="./charts/popular_books.html"></iframe>
         </div>
 
         <div class="tab-section" id="books_rating">
+            <p>This interactive bar chart shows the number of Goodreads ratings for books from my collection, organized by genre. 
+                You can select a genre from the dropdown menu, and the chart will display the books within that genre, sorted by the number of ratings.  
+                The chart uses a log scale for better visualization of books with varying popularity.</p>
             <iframe src="http://127.0.0.1:8050"></iframe>
         </div>
 
@@ -57,15 +77,23 @@
                 <div id="sentiment-analysis">
                     <p class="sentiment-description"><strong>Positive Score (More than 0)</strong></p>
                     <ul class="sentiment-list">
-                        <li>The summaries likely contain words or phrases conveying optimism, happiness, success, or other uplifting themes.</li>
-                        <li>These scores often suggest lighthearted or hopeful tones.</li>
+                        <li>A positive sentiment score indicates that the summary conveys a tone of optimism, happiness, or success. 
+                            The language used is likely to include uplifting words or phrases that evoke positive emotions like joy or hope. </li>
+                        <li>Such scores often suggest that the content has a lighthearted or encouraging feel, highlighting achievements, positive experiences, 
+                            or favorable outcomes.</li>
                     </ul>
         
                     <p class="sentiment-description"><strong>Negative Scores (Less than 0)</strong></p>
                     <ul class="sentiment-list">
-                        <li>Words and phrases in the summary likely express dissatisfaction, criticism, sadness, or frustration.</li>
-                        <li>It might describe unpleasant events, tragic themes, or a bleak tone.</li>
+                        <li>A negative sentiment score suggests that the summary carries a tone of dissatisfaction, sadness, or frustration.</li>
+                        <li>The text may include words or phrases that express negative emotions such as disappointment, anger, or sorrow.</li>
+                        <li> The scores typically indicate a focus on unpleasant events, challenges, or negative experiences, often reflecting a more critical or somber perspective</li>
                     </ul>
+
+                    <p class="sentiment-description">
+                        <strong>Reference:</strong> <a href="https://github.com/cjhutto/vaderSentiment" target="_blank">VADER GitHub Repository</a>
+                    </p>
+                    
                 </div>
             </div>
         </div>
