@@ -40,7 +40,7 @@ def create_layout2():
                         plot_bgcolor='rgb(30, 30, 30)',  # Dark background
                         paper_bgcolor='rgb(30, 30, 30)',  # Dark paper background
                         font=dict(color='white'),  # White font color
-                        height=500,  # Adjust height
+                        height=550,  # Adjust height
                         # width=550,
                         xaxis=dict(
                             showgrid=True,
@@ -61,12 +61,12 @@ def create_layout2():
                     id='country-dropdown',
                     options=[{'label': country, 'value': country} for country in df_year['country_name'].unique()],
                     value=df_year['country_name'].unique()[0],  # Set the default value
-                    style={'backgroundColor': 'white', 'color': 'black', 'width': '200px', 'marginTop': '10px', 'marginBottom': '10px'},
+                    style={'backgroundColor': 'pink', 'color': 'black', 'width': '200px', 'marginTop': '10px', 'marginBottom': '10px'},
                     clearable=False,
                 ),
                 dcc.Graph(id='top-songs-graph')
             ], style={'flex': '1', 'padding': '0 10px'})  # Flex to make both divs occupy equal space
-        ], style={'display': 'flex', 'flexDirection': 'row'})  # Flexbox for side-by-side layout
+        ], style={'display': 'flex', 'flexDirection': 'row', 'alignItems': 'flextstart'})  # Flexbox for side-by-side layout
     ])
 
 # Define callback to update Dash chart (Top 15 Songs chart)
@@ -104,7 +104,7 @@ def register_callbacks2(app):
             plot_bgcolor='rgb(30, 30, 30)',  # Dark background
             paper_bgcolor='rgb(30, 30, 30)',  # Dark paper background
             font=dict(color='white'),  # White font color
-            height=450,  # Adjust height
+            height=500,  # Adjust height
             # width=550,  # Set the width
             xaxis=dict(
                 showgrid=True,

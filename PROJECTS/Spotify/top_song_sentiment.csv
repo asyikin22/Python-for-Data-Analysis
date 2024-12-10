@@ -37,7 +37,7 @@ year,artist,song,sentiment,sentiment_label
 2016,Beyoncé,***Flawless (feat. Chimamanda Ngozi Adichie),0.9982,positive
 2016,Adam Levine,Lost Stars,-0.9628,negative
 2016,Yuna,Crush,0.962,positive
-2016,Adele,Send My Love (To Your New Lover),0.9994,positive
+2016,Adele,Send My Love,0.9994,positive
 2016,gnash,"i hate u, i love u (feat. olivia o'brien)",-0.8703,negative
 2016,Ruth B.,Lost Boy,0.9892,positive
 2016,Destiny's Child,Cater 2 U,0.9987,positive
@@ -62,7 +62,7 @@ year,artist,song,sentiment,sentiment_label
 2018,NF,Let You Down,0.9975,positive
 2018,Demi Lovato,Sorry Not Sorry,-0.9828,negative
 2018,Bebe Rexha,Meant to Be,0.4328,positive
-2018,Queen,Somebody To Love - Remastered 2011,0.9989,positive
+2018,Queen,Somebody To Love,0.9989,positive
 2018,Queen,Another One Bites The Dust - Remastered 2011,0.9838,positive
 2018,Twenty One Pilots,Stressed Out,0.998,positive
 2018,Queen,Under Pressure,0.999,positive
@@ -79,7 +79,7 @@ year,artist,song,sentiment,sentiment_label
 2019,Drax Project,Woke Up Late,0.996,positive
 2019,Yuna,Lelaki,0.9812,positive
 2019,Tones And I,Never Seen the Rain,-0.9582,negative
-2019,Queen,Somebody To Love - Remastered 2011,0.9989,positive
+2019,Queen,Somebody To Love,0.9989,positive
 2019,Fifth Harmony,Work from Home,0.9844,positive
 2019,Normani,Motivation,0.9911,positive
 2019,Miley Cyrus,Mother's Daughter,0.9956,positive

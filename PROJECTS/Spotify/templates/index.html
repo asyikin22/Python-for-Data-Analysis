@@ -22,31 +22,55 @@
         <!--Main content-->
         <div class="content">
             <div id="section1" class="section">
-                <h2>Top Everything</h2>
+                <h1>Top Everything (2014 - 2024)</h1>
                 <div id="section1-container">
                     <iframe src="{{ url_for('static', filename='charts/section1-artist.html') }}"></iframe>
-                    <iframe src="{{ url_for('static', filename='charts/section1-song.html') }}"></iframe>
                     <iframe src="{{ url_for('static', filename='charts/section1-album.html') }}"></iframe>
+                    <iframe src="{{ url_for('static', filename='charts/section1-song.html') }}"></iframe>
                 </div>
             </div>
 
+            <hr>
+
             <div id="section2" class="section">
-                <h2>Yearly Summary</h2>
+                <h1>Yearly Summary</h1>
                 <iframe src="{{ url_for('static', filename='charts/section2-duration.html') }}"></iframe>
                 <iframe src="http://127.0.0.1:8060/dash1/" width="100%" style="border:none;"></iframe>
             </div>
 
+            <hr>
+
             <div id="section3" class="section">
-                <h2>Geographical Analysis</h2>
-                <iframe src="http://127.0.0.1:8060/dash2/" width="100%" style="border:none;"></iframe>
+                <h1>Geographical Analysis</h1>
+                <iframe src="http://127.0.0.1:8060/dash2/" style="border:none;"></iframe>
             </div>
+
+            <hr>
 
             <div id="section4" class="section">
-                <h2>Sentiment Analysis</h2>
+                <h1>Sentiment Analysis</h1>
+                <div id='section4-distr-score'>
+                    <iframe src="{{ url_for('static', filename='charts/sentimentDistr.png') }}"></iframe>
+                    <iframe src="{{ url_for('static', filename='charts/sentimentScore.html') }}"></iframe>
+                </div>
+
+                <div id='section4-PosNeg'>
+                    <iframe src="{{ url_for('static', filename='charts/negativeScore.html') }}"></iframe>
+                    <iframe src="{{ url_for('static', filename='charts/positiveScore.html') }}"></iframe>
+                </div>
             </div>
 
-            <div id="section5" class="section">
-                <h2>Topic Modelling</h2>
+            <hr>
+
+            <div id="section5" class="section lda-container">
+                <h1>Topic Modelling</h1>
+                <iframe src="{{ url_for('static', filename='charts/lda_topics.html') }}" class="lda-iframe"></iframe>
+                <h4>pyLDAvis</h4>
+                <iframe src="{{ url_for('static', filename='charts/pyLDAvis.html') }}" class="lda-iframe"></iframe>
+                <div id='section5-lda' class="lda-chart-container">
+                    <iframe src="{{ url_for('static', filename='charts/lda_topic_song_number.png') }}" class='lda-chart'></iframe>
+                    <iframe src="{{ url_for('static', filename='charts/lda_topic_trend.html') }}" class='lda-chart'></iframe>
+                </div>
             </div>
         </div>
     </div>
