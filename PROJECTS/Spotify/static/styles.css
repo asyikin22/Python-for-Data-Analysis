@@ -10,9 +10,8 @@
 }
 
 .sidebar {
-    width: 230px;
+    width: 300px;
     background-color: #333;
-    /* background-color: red; */
     color: white;
     padding-top: 20px;
     height: 100vh;
@@ -33,7 +32,7 @@
 .sidebar ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 30px;
     display: block;
 }
 
@@ -42,16 +41,24 @@
 }
 
 .content {
-    margin-left: 250px;
-    padding: 20px;
-    width: calc(100% - 250px);
+    margin-left: 350px;
+    margin-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 5px;
+    width: calc(100% - 300px);
+}
+.content p {
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 5px;
 }
 
 hr {
-    border: none;            /* Removes the default border */
-    height: 5px;             /* Sets the height of the line */
-    background-color: black;  /* Sets the color of the line */
-    margin: 30px 0;          /* Adds space before and after the line */
+    border: none;
+    height: 5px;
+    background-color: black;
+    margin: 30px 0;
 }
 
 .section {
@@ -62,98 +69,119 @@ hr {
     height: 650px;
     border: none;
 }
+
 h1 {
     margin-bottom: 20px;
 }
+
 #section1-container {
-    display: flex;  /* Use Flexbox for horizontal layout */
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Ensures responsiveness if the screen is too small */
+    flex-wrap: wrap;
 }
 
 #section1-container iframe {
-    height: 500px;  /* Set a fixed height, adjust based on your needs */
-    border: none;  /* Remove border */
+    height: 500px;
+    border: none;
 }
 
 /* Apply width to the first two iframes */
 #section1-container iframe:nth-child(1),
 #section1-container iframe:nth-child(2) {
-    width: 30%;  /* Adjust the width of the first two iframes */
+    width: 30%;
 }
 
 /* Apply width to the third iframe to make it 1.5 times larger */
 #section1-container iframe:nth-child(3) {
-    width: 38%;  /* This makes the third chart larger than the first two */
-}
-
-#section3 h1 {
-    margin-bottom: 10px;  /* Adjust this value as needed */
+    width: 40%;
 }
 
 #section3 iframe {
-    margin-top: 0;  /* Removes any unwanted top margin */
+    width: 100%;
+    height: 450px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#section3-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#section3-container iframe {
+    border: none;
+    height: 450px;
+}
+
+#section3-container iframe:first-child {
+    width: 40%;
+}
+#section3-container iframe:last-child {
+    width: 60%;
 }
 
 #section4-distr-score {
-    display: flex; /* Use flexbox to align the elements */
-    justify-content: space-between; /* Optional: Adds space between iframes */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
 #section4-distr-score iframe {
-    border: none; /* Remove default border around iframes */
-    height: 500px; /* Make the iframe fill its parent container's height */
+    border: none;
+    height: 500px;
 }
 
 #section4-distr-score iframe:first-child {
-    width: 33.33%; /* Set the PNG chart iframe to 1/3 of the container's width */
+    width: 30%;
 }
 
 #section4-distr-score iframe:last-child {
-    width: 66.66%; /* The second iframe (HTML chart) takes up the remaining 2/3 of the container */
+    width: 70%;
 }
 
 #section4-PosNeg {
     display: flex;
-    flex-direction: row; /* Creates space between the iframes */
-    justify-content: center;
-    gap: 5px; /* Optional, for space between the iframes */
+    justify-content: flex-start;
+    gap: 5px;
 }
 
 #section4-PosNeg iframe {
-    width: 48%; /* Adjust the width to fit two iframes side by side */
-    height: 450px; /* Set a fixed height for the iframes */
-    border: none; /* Optional: Remove iframe borders */
+    width: 50%;
+    height: 450px;
+    border: none;
 }
+
 .lda-container {
     position: relative;
-    height: 900px; /* Adjust this value based on your desired container height */
+    height: 900px;
 }
 
 .lda-iframe {
     width: 100%;
-    height: 50%;  /* Adjust this to take up half of the container height */
-    border: none; /* Optional: Remove border */
+    height: 50%;
+    border: none;
 }
 
 .lda-iframe:nth-child(2) {
-    height: 50%;  /* Second iframe gets the remaining space */
+    height: 50%;
 }
 
 /* Apply Flexbox to the container */
 #section5-lda {
-    display: flex;  /* Flexbox layout */
+    display: flex;
 }
-.lda-chart-container {
-    margin-top: 50px; /* Adjust the value as needed */
-}
+
 #section5-lda iframe {
     border: none;
-    height: 500px;
+    height: 450px;
 }
+
 #section5-lda iframe:first-child {
-    width: 31%; /* Set the PNG chart iframe to 1/3 of the container's width */
+    width: 30%;
 }
 
 #section5-lda iframe:last-child {
-    width: 69%; /* The second iframe (HTML chart) takes up the remaining 2/3 of the container */
+    width: 70%;
 }

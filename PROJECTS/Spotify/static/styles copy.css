@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 230px;
+    background-color: #333;
+    /* background-color: red; */
+    color: white;
+    padding-top: 20px;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+hr {
+    border: none;            /* Removes the default border */
+    height: 5px;             /* Sets the height of the line */
+    background-color: black;  /* Sets the color of the line */
+    margin: 30px 0;          /* Adds space before and after the line */
+}
+
+.section {
+    margin-bottom: 5px;
+}
+.section iframe {
+    width: 100%;
+    height: 650px;
+    border: none;
+}
+h1 {
+    margin-bottom: 20px;
+}
+#section1-container {
+    display: flex;  /* Use Flexbox for horizontal layout */
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures responsiveness if the screen is too small */
+}
+
+#section1-container iframe {
+    height: 500px;  /* Set a fixed height, adjust based on your needs */
+    border: none;  /* Remove border */
+}
+
+/* Apply width to the first two iframes */
+#section1-container iframe:nth-child(1),
+#section1-container iframe:nth-child(2) {
+    width: 30%;  /* Adjust the width of the first two iframes */
+}
+
+/* Apply width to the third iframe to make it 1.5 times larger */
+#section1-container iframe:nth-child(3) {
+    width: 38%;  /* This makes the third chart larger than the first two */
+}
+#section3 iframe {
+    width: 100%;
+    height: 450px;  /* Adjust height as needed */
+    margin: 0;
+    padding: 0;
+    border: none;  /* Removes the iframe border */
+}
+#section3-container {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+#section3-container iframe {
+    border: none; /* Remove default border around iframes */
+    height: 450px; /* Mae the iframe fill its parent container's height */
+    padding: 0;
+    margin: 0;
+}
+#section3-container iframe:first-child,
+#section3-container iframe:last-child {
+    width: 50%; /* Set the PNG chart iframe to 1/3 of the container's width */
+}
+#section4-distr-score {
+    display: flex; /* Use flexbox to align the elements */
+    justify-content: space-between; /* Optional: Adds space between iframes */
+}
+#section4-distr-score iframe {
+    border: none; /* Remove default border around iframes */
+    height: 500px; /* Make the iframe fill its parent container's height */
+}
+
+#section4-distr-score iframe:first-child {
+    width: 33.33%; /* Set the PNG chart iframe to 1/3 of the container's width */
+}
+
+#section4-distr-score iframe:last-child {
+    width: 66.66%; /* The second iframe (HTML chart) takes up the remaining 2/3 of the container */
+}
+
+#section4-PosNeg {
+    display: flex;
+    flex-direction: row; /* Creates space between the iframes */
+    justify-content: center;
+    gap: 5px; /* Optional, for space between the iframes */
+}
+
+#section4-PosNeg iframe {
+    width: 48%; /* Adjust the width to fit two iframes side by side */
+    height: 450px; /* Set a fixed height for the iframes */
+    border: none; /* Optional: Remove iframe borders */
+}
+.lda-container {
+    position: relative;
+    height: 900px; /* Adjust this value based on your desired container height */
+}
+
+.lda-iframe {
+    width: 100%;
+    height: 50%;  /* Adjust this to take up half of the container height */
+    border: none; /* Optional: Remove border */
+}
+
+.lda-iframe:nth-child(2) {
+    height: 50%;  /* Second iframe gets the remaining space */
+}
+
+/* Apply Flexbox to the container */
+#section5-lda {
+    display: flex;  /* Flexbox layout */
+}
+#section5-lda iframe {
+    border: none;
+    height: 500px;
+}
+#section5-lda iframe:first-child {
+    width: 31%; /* Set the PNG chart iframe to 1/3 of the container's width */
+}
+
+#section5-lda iframe:last-child {
+    width: 69%; /* The second iframe (HTML chart) takes up the remaining 2/3 of the container */
+}
+
+/*  responsiveness for the latest layout */
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 220px;
+        padding-top: 15px;
+    }
+
+    .content {
+        margin-left: 230px;
+        width: calc(100% - 230px);
+    }
+
+    #section1-container iframe:nth-child(1),
+    #section1-container iframe:nth-child(2) {
+        width: 40%; /* Adjusted width for tablet */
+    }
+
+    #section1-container iframe:nth-child(3) {
+        width: 50%; /* Adjusted width for tablet */
+    }
+
+    #section3-container iframe:first-child,
+    #section3-container iframe:last-child {
+        width: 50%; /* Adjusted width for tablet */
+    }
+
+    #section4-distr-score iframe:first-child,
+    #section4-distr-score iframe:last-child {
+        width: 50%; /* Adjusted width for tablet */
+    }
+
+    #section4-PosNeg iframe {
+        width: 48%; /* Adjusted for tablet */
+    }
+
+    #section5-lda iframe:first-child,
+    #section5-lda iframe:last-child {
+        width: 48%; /* Adjusted for tablet */
+    }
+
+    .lda-container {
+        height: 800px; /* Adjusted height for tablet */
+    }
+
+    .lda-iframe {
+        height: 50%;
+    }
+}
+
+/* Laptop responsiveness (1024px to 1440px) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .sidebar {
+        width: 240px; /* Increase sidebar width slightly for laptop */
+        padding-top: 15px;
+    }
+
+    .content {
+        margin-left: 240px;
+        width: calc(100% - 240px);
+    }
+
+    #section1-container iframe:nth-child(1),
+    #section1-container iframe:nth-child(2) {
+        width: 35%; /* Adjusted width for laptop */
+    }
+
+    #section1-container iframe:nth-child(3) {
+        width: 45%; /* Adjusted width for laptop */
+    }
+
+    #section3-container iframe:first-child,
+    #section3-container iframe:last-child {
+        width: 48%; /* Adjusted width for laptop */
+    }
+
+    #section4-distr-score iframe:first-child,
+    #section4-distr-score iframe:last-child {
+        width: 48%; /* Adjusted width for laptop */
+    }
+
+    #section4-PosNeg iframe {
+        width: 48%; /* Adjusted for laptop */
+    }
+
+    #section5-lda iframe:first-child,
+    #section5-lda iframe:last-child {
+        width: 48%; /* Adjusted for laptop */
+    }
+
+    .lda-container {
+        height: 850px; /* Adjusted height for laptop */
+    }
+
+    .lda-iframe {
+        height: 50%;
+    }
+}
+
