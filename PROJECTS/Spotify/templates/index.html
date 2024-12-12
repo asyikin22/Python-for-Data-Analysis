@@ -10,13 +10,33 @@
     <div class="container">
         <!--Sidebar-->
         <div class="sidebar">
-            <ul>
-                <li><a href="#section1">Top Everything</a></li>
-                <li><a href="#section2">Yearly Summary</a></li>
-                <li><a href="#section3">Regional Trends</a></li>
-                <li><a href="#section4">Sentiment Insight</a></li>
-                <li><a href="#section5">Topic Modelling</a></li>
-            </ul>
+            <NavBar>
+                <ul>
+                    <li><a href="#section1">Top Everything</a></li>
+                    <li><a href="#section2">Yearly Summary</a></li>
+                    <li><a href="#section3">Regional Trends</a></li>
+                    <li><a href="#section4">Sentiment Insight</a></li>
+                    <li><a href="#section5">Topic Modelling</a></li>
+                </ul>
+            </NavBar>
+
+            <!-- Spotify-Style Search Bar -->
+            <div class="search-section">
+                <h3>Search Music</h3>
+                <input type="text" placeholder="Search here..." id="sidebarSearch">
+                <button id="searchButton">Go</button>
+            </div>
+
+            <!-- Footer Section -->
+            <footer class="sidebar-footer">
+                <p>
+                    <a href="https://github.com/asyikin22/Python-for-Data-Analysis/tree/main/PROJECTS/Spotify" target="_blank">GitHub</a> |
+                    <a href="https://open.spotify.com/" target="_blank">Spotify</a> |
+                    <a href="https://genius.com/" target="_blank">Genius</a> 
+                </p>
+                <br>
+                <p>&copy; 2024 Asyikin</p>
+            </footer>
         </div>
 
         <!--Main content-->
@@ -93,6 +113,10 @@
                     This allows for a <strong> comparative view of both the sentiment trends and the volume of songs released by each artist over the years</strong>.</p>
 
                     <br>
+
+                    <p><i>Note: This data focuses specifically on the top 15 songs listened to each year between 2014 and 2024.</i></p>
+
+                    <br>
                 
                 <div id='section4-PosNeg'>
                     <iframe src="{{ url_for('static', filename='charts/negativeScore.html') }}"></iframe>
@@ -122,7 +146,7 @@
 
                 <p>The topics are generated using <strong><a href="https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html" target="_blank">Latent Dirichlet Allocation (LDA)</a></strong>, a method that finds patterns in text by grouping words that often appear together. 
                     LDA assigns words to topics based on how likely they are to belong to each topic.<p>
-                        
+
                         <br>
 
                 <!-- <h4>pyLDAvis</h4> -->

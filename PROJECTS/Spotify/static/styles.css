@@ -16,6 +16,9 @@
     padding-top: 20px;
     height: 100vh;
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .sidebar ul {
@@ -39,11 +42,68 @@
 .sidebar ul li a:hover {
     background-color: #575757;
 }
+.sidebar .search-section {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar .search-section h3 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: #d56926;
+}
+
+.sidebar .search-section input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.sidebar .search-section button {
+    padding: 10px 20px;
+    background-color: #575757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sidebar .search-section button:hover {
+    background-color: #444;
+}
+
+.sidebar-footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 23px;
+    border-top: 1px solid #444;
+    background-color: #222;
+    height: 120px;
+    align-items: center;
+}
+
+.sidebar-footer p:first-child {
+    margin-top: 10px; /* Adds space above the first paragraph */
+}
+
+.sidebar-footer a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.sidebar-footer a:hover {
+    color: white;
+}
 
 .content {
     margin-left: 350px;
     margin-right: 20px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
     padding: 5px;
     width: calc(100% - 300px);
