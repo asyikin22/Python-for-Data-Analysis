@@ -3,14 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .container {
     display: flex;
     height: 100vh;
 }
 
+.sidebar-title {
+    font-size: 32px;
+    color: turquoise;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    border-bottom: 1px solid #444; /* Optional: adds a border under the title */
+    line-height: 1.8
+}
+
 .sidebar {
-    width: 300px;
+    width: 320px;
     background-color: #333;
     color: white;
     padding-top: 20px;
@@ -19,6 +28,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+NavBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the items vertically */
+    flex-grow: 1; /* Allow the navbar to take up remaining space */
 }
 
 .sidebar ul {
@@ -30,6 +46,7 @@
     padding: 15px;
     text-align: center;
     border-bottom: 1px solid #444;
+    line-height: 60px;
 }
 
 .sidebar ul li a {
@@ -42,52 +59,19 @@
 .sidebar ul li a:hover {
     background-color: #575757;
 }
-.sidebar .search-section {
-    padding: 15px;
-    text-align: center;
-}
-
-.sidebar .search-section h3 {
-    margin-bottom: 10px;
-    font-size: 25px;
-    color: #d56926;
-}
-
-.sidebar .search-section input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    margin-bottom: 10px;
-}
-
-.sidebar .search-section button {
-    padding: 10px 20px;
-    background-color: #575757;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.sidebar .search-section button:hover {
-    background-color: #444;
-}
 
 .sidebar-footer {
     text-align: center;
     padding: 10px;
-    font-size: 23px;
+    font-size: 26px;
     border-top: 1px solid #444;
     background-color: #222;
-    height: 120px;
+    height: 180px;
     align-items: center;
 }
 
 .sidebar-footer p:first-child {
-    margin-top: 10px; /* Adds space above the first paragraph */
+    margin-top: 38px; /* Adds space above the first paragraph */
 }
 
 .sidebar-footer a {
@@ -97,14 +81,14 @@
 }
 
 .sidebar-footer a:hover {
-    color: white;
+    color: yellow;
 }
 
 .content {
     margin-left: 350px;
     margin-right: 20px;
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     padding: 5px;
     width: calc(100% - 300px);
 }
@@ -228,20 +212,39 @@ h1 {
     height: 50%;
 }
 
-/* Apply Flexbox to the container */
-#section5-lda {
+#section5 {
+    margin-bottom: 100px;  /* Adjust the value to increase the bottom margin */
+    width: 100%;
+}
+#section5-genre-mood-distr {
     display: flex;
+    justify-content: space-between;  /* Distribute space between frames */
+    gap: 10px;  /* Optional: Space between the iframes */
+    margin-bottom: 50px;
 }
 
-#section5-lda iframe {
-    border: none;
-    height: 450px;
+#section5-genre-mood-distr iframe {
+    width: 33.3%;  /* Adjust the width to ensure all iframes fit horizontally */
+    height: 400px;  /* Adjust the height as needed */
 }
 
-#section5-lda iframe:first-child {
-    width: 30%;
+#section5-heatmap-pop {
+    display: flex;      /* Use Flexbox for layout */
+    gap: 20px;          /* Optional: Adds space between the iframes */
+    width: 100%;
 }
 
-#section5-lda iframe:last-child {
-    width: 70%;
+#section5-heatmap-pop iframe {
+    height: 400px;      /* Adjust height as necessary */
 }
+#section5-heatmap-pop iframe:first-child {
+    width: 33.3%;             /* The first iframe (heatmap) takes 1/3 of the width */
+}
+
+#section5-heatmap-pop iframe:last-child {
+    width: 66.66%           /* The second iframe (genre_trend) takes 2/3 of the width */
+}
+
+
+
+

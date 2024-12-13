@@ -1,5 +1,6 @@
 import dash
 from flask import Flask, render_template
+import pandas as pd
 from charts_flask.Yearly_Artist_Song import create_layout1, register_callbacks1   
 from charts_flask.geo import create_layout2, register_callbacks2
 from multiprocessing import Process
