@@ -91,7 +91,7 @@ if selected_raw_file != st.session_state.selected_raw_file:
 
 # Main content area based on the selected section
 if st.session_state.selected_section == "Geographical Overview":
-    st.title("Population Breakdown Across States")
+    st.title("Malaysia - Geographical Overview")
     st.subheader("The map shows Malaysian population across states from 1980 to 2020")
     import streamlit as st
 
@@ -112,7 +112,7 @@ if st.session_state.selected_section == "Geographical Overview":
         components.html(f.read(), height=600, width=1000)
                 
 elif st.session_state.selected_section == "State Population":
-    st.title("Distribution of Population Across States")
+    st.title("Distribution of Population")
     
     st.subheader("Chart 1: Animated race chart")    
     st.write("The animated race chart shows population shift across states from 1980 to 2020 ")    
@@ -139,7 +139,7 @@ elif st.session_state.selected_section == "State Population":
     st.markdown(
     """
     <div style="width: 800px; text-align: justify;">
-        In 1980, all states in Malaysia had populations below 2 million. By 1990, all states had grown steadily and surpassed the 2 million mark. 
+        In 1980, all states in Malaysia had populations below 2 million. By 1990, Several states had grown steadily and surpassed the 2 million mark. 
         Selangor experienced the most significant growth, nearing 7 million people to date, while Johor and Sabah followed with populations around 4 million. 
         Due to its small size, Perlis showed very slow growth, with a population of around 300,000 in 2020.
     </div>
@@ -203,16 +203,74 @@ elif st.session_state.selected_section == "Gender - Ethnicity":
 
 elif st.session_state.selected_section == "Diversity Index":
     st.title("Diversity Index Across States")
-    st.write("This section shows visualizations of the data.")
+    st.write("This section shows visualizations of diversity analysis using Shannon-Wiener Index Diversity Index to measure the diversity across states in Malaysia from 1980 to 2020")
     
     with open("charts_html/div-index.html", "r", encoding="utf-8") as f:
         components.html(f.read(), height=400, width=1200)
+    
+    st.markdown("""
+    <div style="text-align: justify; width: 800px; margin: auto;">
+    Kuala Lumpur and Selangor, which are highly urbanized, have the highest diversity scores. 
+    This reflects the mixed ethnicities in cities and the presence of many different groups. 
+    Terengganu and Kelantan, which are less urbanized, have lower diversity scores, 
+    likely due to higher concentrations of specific ethnic or racial groups, particularly the Malay population in these regions.
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<hr style='border: 1px solid red; width: 800px;'>", unsafe_allow_html=True)
+    
         
     with open("charts_html/div-stats.html", "r", encoding="utf-8") as f:
         components.html(f.read(), height=400, width=1200)
     
+    st.markdown(
+    """
+    <div style="width: 800px; text-align: justify;">
+    Most states exhibit relatively low standard deviations, suggesting that the diversity index values are fairly consistent within each state. 
+    Sabah has the highest standard deviation indicating more variability in ethnic diversity within the state compared to others. 
+    The minimum and maximum diversity values show that all states, except for Terengganu, have considerable variation in their diversity indexes, 
+    which is typical as regions with large cities will naturally have more diversity. The diversity across Malaysia is uneven, with some states exhibiting a greater ethnic mix than others.
+    </div>
+    """, unsafe_allow_html=True
+    )
+    
+    st.markdown("<hr style='border: 1px solid red; width: 850px;'>", unsafe_allow_html=True)
+    
     with open("charts_html/racial-trend.html", "r", encoding="utf-8") as f:
         components.html(f.read(), height=600, width=1200)
+
+    st.markdown(
+    """
+    <div style="width: 800px; text-align: justify;">
+        All states in Malaysia are experiencing a consistent decline in ethnic diversity, with Sabah and Perlis showing the steepest decline, indicating a growing racial gap. 
+        Despite being among the most diverse states, Selangor, Negeri Sembilan, Kuala Lumpur, Perak, and Pulau Pinang are also seeing a decrease in diversity over time. 
+        Johor, however, stands out as the only state exhibiting a stable and constant diversity trend, indicating it has managed to retain a relatively equal distribution of different ethnic groups.
+    </div>
+    """, unsafe_allow_html=True
+    )
+    
+    st.markdown("<hr style='border: 1px solid red; width: 850px;'>", unsafe_allow_html=True)
+    
+    # Shannon Diversity Index Formula
+    st.subheader("The formula for the Shannon Diversity Index (H'):")
+    st.latex(r"H' = - \sum_{i=1}^S p_i \ln(p_i)")
+        
+    st.markdown("""
+    - **H'**: Shannon Diversity Index (a measure of diversity in a community).
+    - **S**: Total number of species (or categories) in the community.
+    - **pᵢ**: Proportion of individuals belonging to species *i*:
+    - \( pᵢ = \frac{nᵢ}{N} \)
+    - \( nᵢ \): Number of individuals of species *i*.
+    - \( N \): Total number of individuals across all species.
+    - **ln**: Natural logarithm (base *e*).
+    """)
+    
+    st.markdown("""
+    ### Scoring the Shannon Diversity Index
+
+    - **Higher values of H'** indicates greater diversity.
+    - **Lower values of H'** indicates lower diversity.
+    """)
 
 elif st.session_state.selected_section == "Sources":
     st.title("Links")
