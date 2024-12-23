@@ -19,13 +19,13 @@ function displayGif() {
 
     resultsDiv.innerHTML = `
         <div style="text-align: center; color: gray;">
-            <div style="text-align: center; color: gray; display: flex; justify-content: center; align-items: center; height: 24vh;">
+            <div style="text-align: center; color: gray; display: flex; justify-content: center; align-items: center; height: 18vh;">
                 <iframe src="https://giphy.com/embed/JIX9t2j0ZTN9S" 
                         style="max-width: 100%; max-height: 100%; border: none;" 
                         allowFullScreen>
                 </iframe>
             </div>
-            <p style="color: brown; font-size: 20px;">No results to display 😞 <br> Start your search!</p>
+            <p style="color: brown; font-size: 0.6rem;">No results to display 😞 Start your search!</p>
         </div>
     `;
 }
@@ -43,7 +43,7 @@ function searchBooks() {
     const results = fuse.search(query)
 
     if (results.length === 0) {
-        resultsDiv.innerHTML = "<p>No books found. </p>";
+        resultsDiv.innerHTML = "<p style='text-align: center;'>No books found. </p>";
     } else {
         results.forEach(result => {
             const book = result.item;
@@ -54,8 +54,8 @@ function searchBooks() {
             bookDiv.innerHTML = `
                 <h2 style="text-align: center; color: brown;">${book.Title} by ${book.Author}</h4>
                 <div style="text-align: center;">
-                    <a href="${book.URL.trim()}" target="_blank" style="text-decoration: none; color: black; transition: color 0.3s ease;">Goodreads</a><br>
-                    <a href="${GoogleBooksURL}" target="_blank" style="text-decoration: none; color: black; transition: color 0.3s ease;">Google</a>
+                    <a href="${book.URL.trim()}" target="_blank" style="text-decoration: none; color: black; transition: color 0.3s ease; font-size: 0.8rem;">Goodreads</a><br>
+                    <a href="${GoogleBooksURL}" target="_blank" style="text-decoration: none; color: black; transition: color 0.3s ease; font-size: 0.8rem;">Google</a>
                 </div>
             `;
             resultsDiv.appendChild(bookDiv)
