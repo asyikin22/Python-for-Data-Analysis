@@ -2,7 +2,7 @@ import pandas as pd
 import plotly.graph_objects as go
 from dash import Dash, dcc, html, Input, Output
 
-file_path = 'PROJECTS/Book/Goodreads.csv'
+file_path = './Goodreads.csv'
 
 book_rating = pd.read_csv(file_path)
 
