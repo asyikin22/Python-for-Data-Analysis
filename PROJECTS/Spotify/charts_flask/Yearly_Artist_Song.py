@@ -26,13 +26,13 @@ def create_figure_artist(year):
             'x': 0.5,
             'xanchor':'center', 
             'font': {
-                'size': 30, 
-                'weight': 'bold',
+                'size': 20, 
                 'color': 'pink'
             }},
         plot_bgcolor='rgb(30, 30, 30)', 
         paper_bgcolor='rgb(30, 30, 30)',
         font={'color': 'white'},
+        margin=dict(l=20, r=20, t=60, b=20),
         xaxis=dict(
             tickfont={'color': 'white'},
             showticklabels=False
@@ -56,25 +56,25 @@ def create_figure_song(year):
         title=f'Top Songs for {year}',
         labels={'play_count': 'Number of Times Played'},
         hover_data={'artist': True, 'play_count': True},
-        text='artist'
+        text='song'
     )
     fig.update_layout(
         xaxis_title='Song', yaxis_title='Song Count', showlegend=False,
         title={
             'text': f'Top Songs for {year}', 
             'x': 0.5, 'xanchor': 'center',
-            'font': {'size': 30, 'weight': 'bold', 'color': 'pink'}
+            'font': {'size': 20, 'color': 'pink'}
         },
          plot_bgcolor='rgb(30, 30, 30)', 
             paper_bgcolor='rgb(30, 30, 30)',
             font={'color': 'white'},
+            margin=dict(l=20, r=20, t=60, b=20),
             xaxis=dict(
-                tickfont={'color': 'white'},
-                tickangle=40
+                showticklabels=False
             ),
             yaxis=dict(
                 tickfont={'color': 'white'},
-            ),
+            )
     )
     fig.update_traces(textfont_color='white')
     
@@ -95,8 +95,8 @@ def create_layout1():
                     style={'backgroundColor': 'white', 'color': 'black', 'width': '150px', 'marginTop': '10px', 'marginBottom': '10px'},
                     clearable=False
                 ),
-                dcc.Graph(id='artist-bar-chart')
-            ], style={'flex': 1, 'padding': '20px'}),  # This will take 50% width by default
+                dcc.Graph(id='artist-bar-chart', style={'height': '300px'})
+            ], style={'flex': 1, 'padding': '10px'}),  # This will take 50% width by default
 
             # Section for Song Dropdown and Chart
             html.Div([
@@ -105,12 +105,12 @@ def create_layout1():
                     id='song-year-dropdown',
                     options=[{'label': year, 'value': year} for year in top_songs_per_year['year'].unique()],
                     value=2014,
-                    style={'backgroundColor': 'white', 'color': 'black', 'width': '150px', 'marginTop': '10px', 'marginBottom': '10px'},
+                    style={'backgroundColor': 'white', 'color': 'black', 'width': '120px', 'marginTop': '10px', 'marginBottom': '10px'},
                     clearable=False
                 ),
-                dcc.Graph(id='song-bar-chart')
-            ], style={'flex': 1, 'padding': '20px'}),  # This will take 50% width by default
-        ], style={'display': 'flex', 'flexDirection': 'row', 'justifyContent': 'space-around', 'padding': '20px'}),
+                dcc.Graph(id='song-bar-chart', style={'height': '300px'})
+            ], style={'flex': 1, 'padding': '10px'}),  # This will take 50% width by default
+        ], style={'display': 'flex', 'flexDirection': 'row', 'justifyContent': 'space-around', 'padding': '10px'}),
     ])
 
 def register_callbacks1(app):

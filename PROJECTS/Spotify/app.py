@@ -4,6 +4,7 @@ import pandas as pd
 from charts_flask.Yearly_Artist_Song import create_layout1, register_callbacks1   
 from charts_flask.geo import create_layout2, register_callbacks2
 from multiprocessing import Process
+import os
 
 #initialize flask app
 server = Flask(__name__)
@@ -32,6 +33,9 @@ def run_app2():
     
 
 if __name__ == '__main__':
+    
+    # Enable reloader for Flask app
+    # os.environ["FLASK_ENV"] = "development"  # Sets Flask's environment to auto-reload
 
     p1 = Process(target=run_app1)
     p2 = Process(target=run_app2)

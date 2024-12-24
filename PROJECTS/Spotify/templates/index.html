@@ -53,22 +53,22 @@
 
             <div id="section2" class="section">
                 <h1>Year-by-Year Analysis: Total Songs and Duration Played (2014 - 2024)</h1>
-                <iframe src="{{ url_for('static', filename='charts/section2-duration.html') }}"></iframe>
+                <iframe class="first-iframe" src="{{ url_for('static', filename='charts/section2-duration.html') }}"></iframe>
                 <p>This visualization presents a comprehensive <strong> yearly summary of the total number of songs played and the total duration (in minutes) of playback</strong>, 
                     spanning from 2014 to 2024. The bar chart displays the total number of songs played each year,
                     while the line chart represents the total duration of music played annually. 
                     Together, they offer insights into both the volume and length of my music consumption over time.</p>
-                <iframe src="http://127.0.0.1:8060/dash1/" width="100%" style="border:none;"></iframe>
+                <iframe class="first-iframe" src="http://127.0.0.1:8060/dash1/" width="100%" style="border:none;"></iframe>
                 <p>The dropdown charts let you select and explore the top artists and songs for each year, <strong>based on their playback frequency from 2014 to 2024.</strong></p>
             </div>
 
             <hr>
 
             <div id="section3" class="section">
-                <h1>Geographic Breakdown of Spotify Usage: Total Songs and Duration by Country</h1>
+                <h1>Geographic Breakdown of Spotify Usage</h1>
                 <div id='section3-container'>
                     <iframe src="{{ url_for('static', filename='charts/section3-geo.html') }}"></iframe>
-                    <iframe src="http://127.0.0.1:8060/dash2/" style="border:none;"></iframe>
+                    <iframe src="http://127.0.0.1:8052/dash2/" style="border:none;"></iframe>
                 </div>
 
                     <br>
@@ -183,13 +183,13 @@
                         <br>
         
                 <iframe src="{{ url_for('static', filename='charts/song_ranking_genre.html') }}" style="width: 100%; height: 500px"></iframe>
-
-                        <br>
                         
                 <p>The above <strong>scatter plot shows an interactive scatter plot of song rankings by genre</strong>. Each point represents a song, with the x-axis displaying the year and the y-axis showing the play count. 
                     The songs are grouped by genre, with separate panels (facets) for each genre, arranged in up to three columns. The hover feature displays the song name for each point. 
                     The chart helps to visualize how songs' play counts have evolved over time, broken down by genre.</p>
 
+                    <br>
+                    <br>
             </div>
         </div>
     </div>

@@ -20,7 +20,7 @@ def create_layout2():
             style={'backgroundColor': 'white', 'color': 'black', 'width': '50%', 'marginBottom': '5px'},
             clearable=False,
         ),
-        dcc.Graph(id='top-songs-graph', style={'width': '100%', 'height':'380px'})       
+        dcc.Graph(id='top-songs-graph', style={'width': '100%', 'height':'280px'})       
     ])
     
 
@@ -53,7 +53,7 @@ def register_callbacks2(app):
                 'text': f'Country: {selected_country2}', 
                 'x': 0.5,
                 'xanchor': 'center', 
-                'font': {'size': 20, 'weight': 'bold'}
+                'font': {'size': 18}
             }, 
             plot_bgcolor='rgb(30, 30, 30)',  # Dark background
             paper_bgcolor='rgb(30, 30, 30)',  # Dark paper background
@@ -66,10 +66,16 @@ def register_callbacks2(app):
                 showgrid=True,
                 gridcolor='rgb(169, 169, 169)', 
                 showticklabels=False
+            ),
+            margin=dict(l=20, r=20, t=50, b=20),
+        )
+        fig.update_traces(
+            textfont=dict(
+                family='Arial',    # Change font family if needed
+                size=8,          # Change font size
+                color='black'     # Font color
             )
         )
-        fig.update_traces(textfont_color='white')
-        
         # Remove song name from x-axis labels
         fig.update_layout(
         xaxis={'tickvals': []}  # Hide x-axis labels (song names)

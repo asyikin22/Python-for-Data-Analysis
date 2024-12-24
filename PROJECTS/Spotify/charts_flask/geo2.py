@@ -119,7 +119,7 @@ def register_callbacks2(app):
                 showticklabels=False
             )
         )
-        fig.update_traces(textfont_color='white')
+        fig.update_traces(textfont_color='black')
 
         return fig
 
