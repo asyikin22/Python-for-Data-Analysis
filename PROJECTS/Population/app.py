@@ -69,8 +69,8 @@ st.sidebar.markdown('<div class="sidebar-line"></div>', unsafe_allow_html=True)
 
 # Section for raw file selection
 
-# Get the absolute path to the 'Population/data' folder
-data_folder = os.path.abspath(os.path.join(os.path.dirname(__file__), 'Population', 'data'))
+#path to data folder
+data_folder = os.path.join(os.path.dirname(__file__), 'data')
 
 # List of .csv and .xlsx files in the 'data' folder
 raw_files = [f for f in os.listdir(data_folder) if f.endswith(('.csv', '.xlsx'))]
