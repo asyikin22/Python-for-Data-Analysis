@@ -74,7 +74,7 @@ if st.session_state.selected_section == "Geographical Overview":
     """, unsafe_allow_html=True)
 
     # Load HTML map for population breakdown 
-    with open("charts_html/map_pop2.html", "r", encoding="utf-8") as f:
+    with open("static/charts_html/map_pop2.html", "r", encoding="utf-8") as f:
         components.html(f.read(), height=600, width=1000)
                 
 elif st.session_state.selected_section == "State Population":
@@ -82,7 +82,7 @@ elif st.session_state.selected_section == "State Population":
     
     st.subheader("Chart 1: Animated race chart")    
     st.write("The animated race chart shows population shift across states from 1980 to 2020 ")    
-    with open("charts_html/race-charts-state.html", "r", encoding="utf-8") as f:
+    with open("static/charts_html/race-charts-state.html", "r", encoding="utf-8") as f:
         components.html(f.read(), height=600, width=1000)  
     st.markdown(
     """
@@ -100,7 +100,7 @@ elif st.session_state.selected_section == "State Population":
             
     st.subheader("Chart 2: Population across states from 1980 to 2020")
     st.write("The chart represents the trend of Malaysian population across states from 1980 to 2020")
-    with open("charts_html/state-pop-trend.html", "r", encoding="utf-8") as f:
+    with open("static/charts_html/state-pop-trend.html", "r", encoding="utf-8") as f:
         components.html(f.read(), height=500, width=800)
     st.markdown(
     """
@@ -117,7 +117,7 @@ elif st.session_state.selected_section == "State Population":
     
     st.subheader("Chart 3: State Population from 1980 to 2020")
     st.write("The chart shows breakdown of Malaysian population across states from 1980 to 2020")
-    with open("charts_html/pop_state.html", "r", encoding="utf-8") as f:
+    with open("static/charts_html/pop_state.html", "r", encoding="utf-8") as f:
         components.html(f.read(), height=400, width=800)
   
 elif st.session_state.selected_section == "Gender - Ethnicity":
@@ -126,7 +126,7 @@ elif st.session_state.selected_section == "Gender - Ethnicity":
     st.subheader("Chart 1: Gender & Ethnicity - Trend Across Population")
     st.write("The line chart shows the population trend by gender and ethnicity from 1980 to 2020")
     # Load and display the first chart (adjust the path to the chart)
-    with open("charts_html/gender-eth-trend.html", "r", encoding="utf-8") as f:
+    with open("static/charts_html/gender-eth-trend.html", "r", encoding="utf-8") as f:
         components.html(f.read(), height=450, width=1200)
         
     
@@ -134,14 +134,14 @@ elif st.session_state.selected_section == "Gender - Ethnicity":
     
     st.subheader("Chart 2: Gender & Ethnicity in General Population")
     st.write("The chart shows breakdown of Malaysian population by gender and ethnicity from 1980 to 2020")
-    with open("charts_html/gender-eth.html", "r", encoding="utf-8") as f:
+    with open("static/charts_html/gender-eth.html", "r", encoding="utf-8") as f:
         components.html(f.read(), height=420, width=800)
     
     st.markdown("<hr style='border: 1px solid red; width: 800px;'>", unsafe_allow_html=True)
     
     st.subheader("Chart 3: Ethnicity Across States")
     st.write("The chart shows breakdown of Malaysian population by ethnicity across states from 1980 to 2020")
-    with open("charts_html/bubble-charts-state.html", "r", encoding="utf-8") as f:
+    with open("static/charts_html/bubble-charts-state.html", "r", encoding="utf-8") as f:
         components.html(f.read(), height=600, width=1200)
     
     st.markdown(
@@ -171,7 +171,7 @@ elif st.session_state.selected_section == "Diversity Index":
     st.title("Diversity Index Across States")
     st.write("This section shows visualizations of diversity analysis using Shannon-Wiener Index Diversity Index to measure the diversity across states in Malaysia from 1980 to 2020")
     
-    with open("charts_html/div-index.html", "r", encoding="utf-8") as f:
+    with open("static/charts_html/div-index.html", "r", encoding="utf-8") as f:
         components.html(f.read(), height=400, width=1200)
     
     st.markdown("""
@@ -186,7 +186,7 @@ elif st.session_state.selected_section == "Diversity Index":
     st.markdown("<hr style='border: 1px solid red; width: 800px;'>", unsafe_allow_html=True)
     
         
-    with open("charts_html/div-stats.html", "r", encoding="utf-8") as f:
+    with open("static/charts_html/div-stats.html", "r", encoding="utf-8") as f:
         components.html(f.read(), height=400, width=1200)
     
     st.markdown(
@@ -202,7 +202,7 @@ elif st.session_state.selected_section == "Diversity Index":
     
     st.markdown("<hr style='border: 1px solid red; width: 850px;'>", unsafe_allow_html=True)
     
-    with open("charts_html/racial-trend.html", "r", encoding="utf-8") as f:
+    with open("static/charts_html/racial-trend.html", "r", encoding="utf-8") as f:
         components.html(f.read(), height=600, width=1200)
 
     st.markdown(
