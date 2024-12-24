@@ -68,7 +68,7 @@ st.sidebar.markdown('<div class="sidebar-line"></div>', unsafe_allow_html=True)
 #####################################################################################################
 
 # Section for raw file selection
-data_folder = "data"  # Adjust folder path
+data_folder = os.path.abspath('data')
 raw_files = [f for f in os.listdir(data_folder) if f.endswith(('.csv', '.xlsx'))]
 selected_raw_file = st.sidebar.selectbox("Choose a file", raw_files)
 
@@ -199,7 +199,7 @@ elif st.session_state.selected_section == "Gender - Ethnicity":
     
     st.subheader("Chart 4: Gender & Ethnicity Across States")
     st.write("The chart shows breakdown of Malaysian population by gender and ethnicity across states from 1980 to 2020")
-    components.iframe("http://127.0.0.1:8042/", height=600, width=700)
+    components.iframe("https://pop-dash.onrender.com/", height=600, width=700)
 
 elif st.session_state.selected_section == "Diversity Index":
     st.title("Diversity Index Across States")
