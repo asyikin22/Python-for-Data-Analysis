@@ -1,7 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
-import os
+
 
 #####################################################################################################################
 
@@ -9,19 +9,14 @@ import os
 st.sidebar.title("Choose a Section:")
 
 # Create a list of sections with buttons in the sidebar
-sections = ["Geographical Overview", "State Population", "Gender - Ethnicity", "Diversity Index", "Sources",  "Raw File"]
+sections = ["Geographical Overview", "State Population", "Gender - Ethnicity", "Diversity Index", "Sources"]
 
 # Initialize a session state variable to track the selected section
 if 'selected_section' not in st.session_state:
     st.session_state.selected_section = sections[0]  # Default to "Introduction"
 
-# Initialize session state for the raw file selection and content
-if 'selected_raw_file' not in st.session_state:
-    st.session_state.selected_raw_file = None
-if 'raw_file_data' not in st.session_state:
-    st.session_state.raw_file_data = None
     
-# Custom CSS for hover effect and styling
+# # Custom CSS for hover effect and styling
 st.markdown("""
     <style>
         /* Remove margin and padding from sidebar */
@@ -40,7 +35,7 @@ st.markdown("""
             text-align: left !important;
             border: none !important;
             border-radius: 5px !important;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             transition: background-color 0.3s ease;
         }
         
@@ -48,12 +43,6 @@ st.markdown("""
             background-color: #f1f1f1 !important;  /* Light grey on hover */
         }
         
-        /* Styling for horizontal line */
-        .sidebar-line {
-            border-top: 1px solid #D3D3D3;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
     </style>
 """, unsafe_allow_html=True)
 
@@ -65,35 +54,6 @@ for section in sections:
 # Add horizontal line after section buttons
 st.sidebar.markdown('<div class="sidebar-line"></div>', unsafe_allow_html=True)
 
-#####################################################################################################
-
-# Section for raw file selection
-
-#path to data folder
-data_folder = os.path.join(os.path.dirname(__file__), 'data')
-
-# List of .csv and .xlsx files in the 'data' folder
-raw_files = [f for f in os.listdir(data_folder) if f.endswith(('.csv', '.xlsx'))]
-
-# Streamlit selectbox for file selection
-selected_raw_file = st.sidebar.selectbox("Choose a file", raw_files)
-
-# Store the selected file in session state
-if selected_raw_file != st.session_state.selected_raw_file:
-    st.session_state.selected_raw_file = selected_raw_file
-    file_path = os.path.join(data_folder, selected_raw_file)
-    
-    # Load and store raw file data
-    try:
-        if selected_raw_file.endswith('.csv'):
-            st.session_state.raw_file_data = pd.read_csv(file_path)
-        elif selected_raw_file.endswith('.xlsx'):
-            st.session_state.raw_file_data = pd.read_excel(file_path)
-    except Exception as e:
-        st.session_state.raw_file_data = None
-        st.error(f"Error loading file: {e}")
-
-#####################################################################################################
 
 # Main content area based on the selected section
 if st.session_state.selected_section == "Geographical Overview":
@@ -287,17 +247,6 @@ elif st.session_state.selected_section == "Sources":
     - [Malaysia's National Statistic Organisation](https://open.dosm.gov.my/dashboard/population)  
     """)
 
-    
-
-##################################################################################################### 
-
-# Display Raw File content only when "Raw File" section is selected
-if st.session_state.selected_section == "Raw File" and st.session_state.selected_raw_file:
-    st.title(f"{st.session_state.selected_raw_file}")
-    if st.session_state.raw_file_data is not None:
-        st.dataframe(st.session_state.raw_file_data)
-    else:
-        st.error("No file data available.")
     
 
 
