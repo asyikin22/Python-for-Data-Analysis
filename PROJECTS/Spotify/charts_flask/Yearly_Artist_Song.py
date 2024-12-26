@@ -2,9 +2,20 @@ import dash
 from dash import dcc, html
 import plotly.express as px
 import pandas as pd
+import os 
 
-top_artist_per_year = pd.read_csv(r'./top_artist_2014_2024.csv', encoding='latin1')
-top_songs_per_year = pd.read_csv(r'./top_song_2014_2024.csv', encoding='latin1')
+# Get the directory where the script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Adjust file paths using os.path.join
+file_path_top_artist = os.path.join(script_dir, 'top_artist_2014_2024.csv')
+file_path_top_song = os.path.join(script_dir, 'top_song_2014_2024.csv')
+
+top_artist_per_year = pd.read_csv(file_path_top_artist, encoding='latin1')
+top_songs_per_year = pd.read_csv(file_path_top_song, encoding='latin1')
+
+# top_artist_per_year = pd.read_csv(r'./top_artist_2014_2024.csv', encoding='latin1')
+# top_songs_per_year = pd.read_csv(r'./top_song_2014_2024.csv', encoding='latin1')
 
 #create plotly figure for top artist
 def create_figure_artist(year):

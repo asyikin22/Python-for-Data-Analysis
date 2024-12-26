@@ -2,13 +2,25 @@ import dash
 from dash import dcc, html, Input, Output
 import pandas as pd
 import plotly.express as px
+import os
 
 # Initialize the dash app
 app = dash.Dash(__name__)
 
+# Get the absolute path to the directory where the script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Define the paths to your CSV files using absolute paths
+file_path_country_summary = os.path.join(script_dir, 'country_summary.csv')
+file_path_country_year_name = os.path.join(script_dir, 'country_year_name.csv')
+
+# Read the CSV files
+country_summary = pd.read_csv(file_path_country_summary)
+df_year = pd.read_csv(file_path_country_year_name)
+
 # df_year = pd.read_csv(r'./Dataset/country_year_name.csv')
-country_summary = pd.read_csv(r'./country_summary.csv')
-df_year = pd.read_csv(r'./country_year_name.csv')
+# country_summary = pd.read_csv(r'./country_summary.csv')
+# df_year = pd.read_csv(r'./country_year_name.csv')
 
 # Define the app layout
 def create_layout2():
