@@ -6,12 +6,9 @@ import plotly.express as px
 # Initialize the dash app
 app = dash.Dash(__name__)
 
-file_path_country_summary ='./country_summary.csv'
-file_path_country_year_name = './country_year_name.csv'
-
 # df_year = pd.read_csv(r'./Dataset/country_year_name.csv')
-country_summary = pd.read_csv(file_path_country_summary)
-df_year = pd.read_csv(file_path_country_year_name)
+country_summary = pd.read_csv(r'./dataset/country_summary.csv')
+df_year = pd.read_csv(r'./dataset/country_year_name.csv')
 
 # Define the app layout
 def create_layout2():

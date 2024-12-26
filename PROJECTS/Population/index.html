@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #1E1E1E; /* Dark Gray */
+            color: #E0E0E0; /* Light Gray Text for readability */
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        hr {
+            border: none;             
+            border-top: 2px solid red; /* Add a red top border */
+            margin-top: 40px;         /* Margin on top */
+            margin-bottom: 40px;   
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .navbar-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #2C2C2C;
+            border-bottom: 2px solid #ccc;
+            padding: 10px 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #1E1E1E; /* Dark Gray tabs */
+            color: #CCCCCC;
+            border: 1px solid #333333;
+            border-radius: 4px 4px 0 0;
+            margin-right: 10px;
+        }
+
+        .tab:hover {
+            background-color: #ddd;
+        }
+
+        .tab.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .content-container {
+            max-width: 800px; /* Restricts the content width */
+            margin: 20px auto; /* Centers the content with vertical spacing */
+            padding: 20px; /* Adds spacing inside the container */
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-title">A breakdown into Malaysian Population from 1980 to 2020</div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="showTab(1)">Map Overview</div>
+        <div class="tab" onclick="showTab(2)">State</div>
+        <div class="tab" onclick="showTab(3)">Gender-Ethnicity (General)</div>
+        <div class="tab" onclick="showTab(4)">Gender-Ethnicity (State)</div>
+        <div class="tab" onclick="showTab(5)">Diversity Index</div>
+    </div>
+
+    <!-- Content -->
+    <div class="content-container">
+        <div class="content active" id="section1">
+            <h3>Section 1: Overview</h3>
+            <p> The map of Malaysia consists of two distinct regions: Peninsular Malaysia (also known as West Malaysia), 
+                which is located on the southernmost tip of the Asian continent, and East Malaysia, which is situated on 
+                the island of Borneo. The country is bordered by Thailand to the north, Singapore to the south, Brunei 
+                and Indonesia to the east, and the South China Sea to the west. Malaysia features a diverse landscape of 
+                coastal plains, mountain ranges, and tropical rainforests, with the iconic capital city, Kuala Lumpur, 
+                located in the west.</p>
+            <iframe src="charts_html/map_pop2.html"
+                style="width: 100%; height: 400px; border: none;"></iframe>
+        </div>
+
+        <div class="content" id="section2">
+            <h3>Section 2: Analysis</h3>
+            <h4>The animated race chart shows population shift across states from 1980 to 2020 </h4>
+            <iframe src="charts_html/race-charts-state.html"
+                style="width: 100%; height: 450px; border: none;"></iframe>
+
+                <hr>
+
+            <h4>The chart represents the trend of Malaysian population across states from 1980 to 2020</h4>
+            <iframe src="charts_html/state-pop-trend.html"
+                style="width: 100%; height: 420px; border: none;"></iframe>
+
+                <hr>
+
+            <h4>The chart shows breakdown of Malaysian population across states from 1980 to 2020</h4>
+            <iframe src="charts_html/pop_state.html"
+                style="width: 100%; height: 420px; border: none;"></iframe>
+        </div>
+        <div class="content" id="section3">
+            <h3>Section 3: Comparison</h3>
+            <h4>The line chart shows the population trend by gender and ethnicity from 1980 to 2020</h4>
+            <iframe src="charts_html/gender-eth-trend.html"
+                style="width: 100%; height: 400px; border: none;"></iframe>
+
+                <hr>
+            
+            <h4>The chart shows breakdown of Malaysian population by gender and ethnicity from 1980 to 2020</h4>
+            <iframe src="charts_html/gender-eth.html"
+                style="width: 100%; height: 420px; border: none;"></iframe>
+        </div>
+        <div class="content" id="section4">
+            <h3>Section 4: Insights</h3>
+            <h4>The chart shows breakdown of Malaysian population by ethnicity across states from 1980 to 2020</h4>
+            <iframe src="charts_html/bubble-charts-state.html"
+                style="width: 100%; height: 450px; border: none;"></iframe>
+            <p>In 1980, Bumiputera was the dominant ethnicity across all states, with the highest populations in Sarawak, 
+                followed by Johor, Kelantan, Perak, and Kedah, each with populations close to 1 million. Kuala Lumpur and Penang were exceptions, 
+                where the Chinese dominated with populations around 500,000. Despite being the second-largest ethnic group, 
+                the Chinese population was nearly equal to the Bumiputera in Johor, Melaka, Negeri Sembilan, Perak, and Selangor. 
+                Kelantan and Terengganu had a significant racial disparity, with Bumiputera clearly outnumbering other races. 
+                Bumiputera growth has been rapid, surpassing the initially dominant Chinese population in Kuala Lumpur by the early 2000s, 
+                and more recently in Penang, where the populations of Bumiputera and Chinese are now almost equal. 
+                Overall, Bumiputera has seen the highest growth across all states, reaching a population of 7 million in 2020.</p>
+
+                <hr>
+
+            <h4>The chart shows breakdown of Malaysian population by gender and ethnicity across states from 1980 to 2020</h4>
+            <iframe src="https://pop-dash.onrender.com/"
+                style="width: 100%; height: 600px; border: none;"></iframe>
+        </div>
+        <div class="content" id="section5">
+            <h3>Section 5: Insights</h3>
+            <h4>This section shows visualizations of diversity analysis using Shannon-Wiener Index Diversity Index to measure the diversity across states in Malaysia from 1980 to 2020</h4>
+            <iframe src="charts_html/div-index.html"
+                style="width: 100%; height: 480px; border: none;"></iframe>
+
+            <p>Kuala Lumpur and Selangor, which are highly urbanized, have the highest diversity scores. 
+                This reflects the mixed ethnicities in cities and the presence of many different groups. 
+                Terengganu and Kelantan, which are less urbanized, have lower diversity scores, 
+                likely due to higher concentrations of specific ethnic or racial groups, particularly the Malay population in these regions.</p>
+
+                <hr>
+
+            <iframe src="charts_html/div-stats.html"
+                style="width: 100%; height: 420px; border: none;"></iframe>
+
+            <p>Most states exhibit relatively low standard deviations, suggesting that the diversity index values are fairly consistent within each state. 
+                Sabah has the highest standard deviation indicating more variability in ethnic diversity within the state compared to others. 
+                The minimum and maximum diversity values show that all states, except for Terengganu, have considerable variation in their diversity indexes, 
+                which is typical as regions with large cities will naturally have more diversity. The diversity across Malaysia is uneven, with some states exhibiting a greater ethnic mix than others.</p>
+                
+                <hr>
+
+            <iframe src="charts_html/racial-trend.html"
+                style="width: 100%; height: 420px; border: none;"></iframe>
+            
+            <p> All states in Malaysia are experiencing a consistent decline in ethnic diversity, with Sabah and Perlis showing the steepest decline, indicating a growing racial gap. 
+                Despite being among the most diverse states, Selangor, Negeri Sembilan, Kuala Lumpur, Perak, and Pulau Pinang are also seeing a decrease in diversity over time. 
+                Johor, however, stands out as the only state exhibiting a stable and constant diversity trend, indicating it has managed to retain a relatively equal distribution of different ethnic groups.</p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabIndex) {
+            // Hide all content sections
+            let contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Deactivate all tabs
+            let tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Activate the clicked tab and its corresponding content
+            document.getElementById('section' + tabIndex).classList.add('active');
+            document.querySelectorAll('.tab')[tabIndex - 1].classList.add('active');
+        }
+
+        // Initially show the first section
+        showTab(1);
+    </script>
+</body>
+</html>
