@@ -3,8 +3,11 @@ from dash import dcc, html
 import plotly.express as px
 import pandas as pd
 
-top_artist_per_year = pd.read_csv(r'./dataset/top_artist_2014_2024.csv', encoding='latin1')
-top_songs_per_year = pd.read_csv(r'./dataset/top_song_2014_2024.csv', encoding='latin1')
+file_path_top_artist = './top_artist_2014_2024.csv'
+file_path_top_song = './top_song_2014_2024.csv'
+
+top_artist_per_year = pd.read_csv(file_path_top_artist, encoding='latin1')
+top_songs_per_year = pd.read_csv(file_path_top_song, encoding='latin1')
 
 #create plotly figure for top artist
 def create_figure_artist(year):
